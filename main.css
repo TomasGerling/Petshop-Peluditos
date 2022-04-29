@@ -555,6 +555,13 @@ h3.nombre-producto{
         margin-right: 60px;
         margin-left: 60px;
         align-items: center;
+        transition-property: all ;
+        transition-duration: .5s;
+        transition-delay: .5s;
+        transition-timing-function: ease;
+    }
+    div.card:hover{
+        transform: rotate(20deg);
     }
     .Otros{
         display: grid;
@@ -729,4 +736,36 @@ h3.nombre-producto{
         grid-area: alimento-4;
         margin-right: 40px; 
         }
+    .Logo{
+        animation-name: fade-in;
+        animation-iteration-count: 1;
+        animation-timing-function: ease;
+        animation-duration: 3s;
+    }
+    @keyframes fade-in{
+        0%{
+            transform: translateX(-50px);
+            animation-timing-function: ease;
+        }
+        50%{
+            transform: translateX(0px);
+            animation-timing-function: ease;
+        }
+        75%{
+            transform: translateX(50px);
+            animation-timing-function: ease;
+        }
+        80%{
+            transform: translateX(100px);
+            animation-timing-function: ease;
+        }
+        90%{
+            transform: translateX(50px);
+            animation-timing-function: ease;
+        }
+        100%{
+            transform: translateX(0px);
+            animation-timing-function: ease;
+        }
+    }
 }
