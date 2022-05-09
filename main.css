@@ -11,16 +11,16 @@ body{
 /* Esta parte funciona para el grid de index.html */
 .container {  
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.3fr 0.3fr 1fr 1fr 1fr ;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.3fr 0.3fr 0.5fr 0.5fr 0.5fr ;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
-    "Nav Nav"
-    "Main Main"
-    "Alimentos Alimentos"
-    "Otros Otros"
-    "Promociones Promociones";
+    "Nav"
+    "Main"
+    "Alimentos"
+    "Otros"
+    "Promociones";
 }
 
 .Nav {  
@@ -33,6 +33,8 @@ body{
     "Portada"
     "Menu";
     grid-area: Nav;
+    margin-right: 40px;
+    margin-left: -12px;
 }
 
 .Portada { 
@@ -56,10 +58,13 @@ body{
     "Nombre Nombre"
     "Texto Texto";
     grid-area: Main;
+    margin-right: 40px;
+    margin-left: -12px;
 }
 .Nombre { 
     grid-area: Nombre;
-    width: 100%; 
+    width: 100%;
+    margin-right: 40px; 
 }
 .Logo{
     width: 100%;
@@ -67,12 +72,13 @@ body{
 .Texto {
     font-size: large; 
     grid-area: Texto; 
+    margin-right: 40px;
 }
 
 .Alimentos{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.2fr 1fr 0.8fr;
+    grid-template-rows: 0.08fr .3fr .3fr;
     gap: 0px 10px;
     grid-auto-flow: row;
     grid-template-areas:
@@ -80,6 +86,7 @@ body{
     "Alimentos-perro Alimentos-gato"
     "Alimentos-pez Alimentos-otro";
     grid-area: Alimentos;
+    margin-left: -12px;
 }
 
 .Buscador{
@@ -97,7 +104,7 @@ body{
 .Alimentos-gato{
     grid-area: Alimentos-gato;
     text-align: center;
-    /* margin-right: 40px; */
+    margin-right: 40px;
 }
 
 .Alimentos-pez{
@@ -109,13 +116,16 @@ body{
 .Alimentos-otro{
     grid-area: Alimentos-otro;
     text-align: center;
+    margin-right: 40px;
 }
 
 .Otros{
+    width: 70%;
+    margin-left: -12px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.2fr 1fr .5fr;
-    gap: 0px 0px;
+    grid-template-columns: 0.3fr 0.3fr;
+    grid-template-rows: 0.08fr .3fr .3fr;
+    gap: 20px 20px;
     grid-auto-flow: row;
     grid-template-areas: 
     "productos-titulo productos-titulo"
@@ -126,6 +136,7 @@ body{
 .productos-titulo{
     grid-area: productos-titulo;
     text-align: center;
+    text-overflow: ellipsis;
 }
 
 .productos-higiene{
@@ -133,7 +144,7 @@ body{
     margin-left: 2px;
 }
 
-.productos-golosinas{
+.productos-golosina{
     grid-area: productos-golosinas;
     margin-right: 40px;
 }
@@ -150,28 +161,31 @@ body{
 
 .Promociones {  
     display: grid;
+    margin-top: 0px;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.1fr 1fr 0.8fr;
-    gap: 0px 0px;
+    grid-template-rows: 0.1fr 1fr 0.4fr;
+    gap: 10px 10px;
     grid-auto-flow: row;
     grid-template-areas:
     "Titulo Titulo"
     "Promos1 Promos2"
     "Promos3 Promos4";
     grid-area: Promociones;
+    margin-left: -12px;
 }
 
-.Titulo { 
+.titulo-principal { 
     grid-area: Titulo; 
     text-align: center;
     margin: 5px;
-    font-size: large;
+    font-size: 50px;
+    border: dotted;
+    border-radius: 20px;
 }
 
 .Promos1 { 
     grid-area: Promos1;
     margin-left: 2px;
-    /* width: 350px; */
 }
 
 .Promos2 { 
@@ -286,18 +300,18 @@ main.contacto div ul.datos li{
 /* Esto es para Alimento.html */
 .container-alimento {  
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: 0.2fr 1fr;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
-    "Nav-alimento Nav-alimento"
-    "pages-alimento pages-alimento"
+    "Nav-alimento"
+    "pages-alimento"
 }
 .Nav-alimento {  
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.9fr .1fr;
+    grid-template-rows: 0.9fr 0.1fr;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
@@ -320,13 +334,17 @@ main.contacto div ul.datos li{
     display: grid;
     grid-template-columns: 1fr 1fr ;
     grid-template-rows: 0.2fr 1fr 1fr;
-    gap: 0px 0px;
+    gap: 10px 30px;
     grid-auto-flow: row;
     grid-template-areas:
     "Titulo Titulo"
     "alimento-1 alimento-2" 
     "alimento-3 alimento-4";
     grid-area: pages-alimento;
+}
+.Titulo{
+    grid-area: Titulo;
+    text-align: center;
 }
 .alimento-1 { 
     grid-area: alimento-1;
@@ -335,7 +353,7 @@ main.contacto div ul.datos li{
 
 .alimento-2 { 
     grid-area: alimento-2;
-    margin-right: 20px;
+    margin-right: 10px;
 }
 
 .alimento-3 { 
@@ -345,7 +363,7 @@ main.contacto div ul.datos li{
 
 .alimento-4 { 
     grid-area: alimento-4;
-    margin-right: 20px; 
+    margin-right: 10px; 
 }
 
 
@@ -362,23 +380,24 @@ main.contacto div ul.datos li{
 }
 .Nav-otros {  
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 0.9fr .1fr;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
-    "Portada-otro"
-    "Menu-otro";
+    "Portada-otros Portada-otros"
+    "Menu-otros Menu-otros";
     grid-area: Nav-otro;
 }
 
 
 .Portada-otros{
     width: 100%;
+    grid-area: Portada-otros;
 }
 
 .Menu-otros { 
-    grid-area: Menu-otro;
+    grid-area: Menu-otros;
     margin: 0;
     display: flex;
     flex-direction: row;
@@ -387,8 +406,8 @@ main.contacto div ul.datos li{
 .pages-otros {  
     display: grid;
     grid-template-columns: 1fr 1fr ;
-    grid-template-rows: 0.2fr repeat(1fr);
-    gap: 0px 0px;
+    grid-template-rows: 0.2fr 1fr 1fr;
+    gap: 15px 70px;
     grid-auto-flow: row;
     grid-template-areas:
     "Titulo Titulo"
@@ -421,13 +440,13 @@ div.card h3.nombre-producto{
     margin-bottom: 20px;
 }
 div.product{
-    margin: 20px;
+    margin: 0px;
 }
 div.card img{
     align-content: center;
     width: 140px;
     margin-top: 20px;
-    margin-left: 20px;
+    margin-left: 30px;
 }
 div.precio-producto p{
     margin-bottom: 40px;
@@ -738,18 +757,11 @@ div.precio-producto p{
         grid-auto-flow: row;
         grid-template-areas:
         "Portada-alimento Portada-alimento"
-        "Menu-alimento lema-alimento";
+        "Menu-alimento Menu-alimento";
         grid-area: Nav-alimento;
     }
     .Portada-alimento{
         width: 100%;
-    }
-
-    .lema-alimento { 
-        grid-area: lema-alimento;
-        margin: -15px 25px 0px -50px;
-        display: flex;
-        flex-direction: row;
     }
 
     .Menu-alimento { 
@@ -777,45 +789,42 @@ div.precio-producto p{
     .alimento-2 { 
         grid-area: alimento-2;
         margin-right: 40px;
-        }
+    }
         
     .alimento-3 { 
         grid-area: alimento-3;
         margin-left: 2px;
-        }
+    }
         
     .alimento-4 { 
         grid-area: alimento-4;
         margin-right: 40px; 
-        }
-        .Nav-alimento {  
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: 0.9fr .1fr;
-            gap: 0px 0px;
-            grid-auto-flow: row;
-            grid-template-areas:
-            "Portada-alimento Portada-alimento"
-            "Menu-alimento lema-alimento";
-            grid-area: Nav-alimento;
-        }
-        .Portada-alimento{
-            width: 100%;
-        }
-    
-        .lema-alimento { 
-            grid-area: lema-alimento;
-            margin: -15px 25px 0px -50px;
-            display: flex;
-            flex-direction: row;
-        }
-    
-        .Menu-alimento { 
-            grid-area: Menu-alimento;
-            margin: 0;
-            display: flex;
-            flex-direction: row;
-        }
+    }
+    .Portada-otros{
+        width: 100%;
+    }
+
+    .Nav-otros {  
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0.9fr .1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+        "Portada-otros Portada-otros"
+        "Menu-otros Menu-otros";
+        grid-area: Nav-otros;
+    }
+    .Portada-otros{
+        grid-area: Portada-otros;
+        width: 100%;
+    }
+    .Menu-otros { 
+        grid-area: Menu-otros;
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+    }
     .pages-otros {  
         display: grid;
         grid-template-columns: 360px 360px 360px 360px;
@@ -823,34 +832,41 @@ div.precio-producto p{
         gap: 0px 0px;
         grid-auto-flow: row;
         grid-template-areas:
-        "Titulo-principal Titulo-principal Titulo-principal Titulo-principal "
+        "titulo-principal titulo-principal titulo-principal titulo-principal "
         "otro-1 otro-2 otro-3 otro-4";
-        grid-area: pages-otro;
-        }
+        grid-area: pages-otros;
+    }
+    h2.titulo-principal{
+        grid-area: titulo-principal;
+    }
     .otro-1 { 
         grid-area: otro-1;
         margin-left: 2px;
-        }
+    }
             
     .otro-2 { 
         grid-area: otro-2;
         margin-right: 40px;
-        }
-            
+    }
+        
     .otro-3 { 
         grid-area: otro-3;
         margin-left: 2px;
-        }
-
+    }
+        
     .otro-4 { 
         grid-area: otro-4;
         margin-right: 40px; 
-        }
+    }
+
+
     h2.titulo-principal{
         text-align: center;
         font-weight: bolder;
         font-size: 40px;
+        grid-area: titulo-principal;
         }
+
     .Logo{
         animation-name: fade-in;
         animation-iteration-count: 1;
@@ -863,7 +879,7 @@ div.precio-producto p{
             animation-timing-function: ease;
         }
         50%{
-            transform: translateX(0px);
+            transform: translateX(25px);
             animation-timing-function: ease;
         }
         75%{
