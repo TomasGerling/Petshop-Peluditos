@@ -1,0 +1,62 @@
+// Esto es para otros-productos.html
+
+.container-otros{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas: 
+    "Nav-otros" 
+    "pages-otro";
+}
+.Nav-otros{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.9fr 0.1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas: 
+    "Portada-otros" 
+    "Menu-otros";
+    grid-area: Nav-otros;
+}
+.Portada-otros{
+    width: 100%;
+    grid-area: Portada-otros;
+}
+.Menu-otros{
+    grid-area: Menu-otros;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.pages-otros{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.2fr 1fr 1fr;
+    gap: 15px 70px;
+    grid-auto-flow: row;
+    grid-template-areas: 
+    "Titulo Titulo" 
+    "otro-1 otro-2" 
+    "otro-3 otro-4";
+    grid-area: pages-otro;
+}
+.otro-1{
+    grid-area: otro-1;
+    margin-left: 2px;
+}
+.otro-2{
+    grid-area: otro-2;
+    margin-right: 20px;
+}
+.otro-3{
+    grid-area: otro-3;
+    margin-left: 2px;
+}
+.otro-4{
+    grid-area: otro-4;
+    margin-right: 20px;
+}
