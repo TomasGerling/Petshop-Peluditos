@@ -1,0 +1,25 @@
+{
+  "name": "petshop-peluditos",
+  "version": "1.0.0",
+  "description": "Page created in the CoderHouse web development course. The theme of the page is a place of sale of food and products for pets\r Page developed by Tomas Gerling",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css":"node-sass --include-path scss scss/main.scss css/main.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TomasGerling/petshop-peluditos.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TomasGerling/petshop-peluditos/issues"
+  },
+  "homepage": "https://github.com/TomasGerling/petshop-peluditos#readme",
+  "devDependencies": {
+    "node-sass": "^7.0.1",
+    "nodemon": "^2.0.16"
+  }
+}

@@ -1,0 +1,629 @@
+.container-alimento {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.2fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "Nav-alimento"  "pages-alimento"; }
+
+.Nav-alimento {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.9fr 0.1fr;
+  gap: 10px 30px;
+  grid-auto-flow: row;
+  grid-template-areas: "Portada-alimento"  "Menu-alimento";
+  grid-area: Nav-alimento; }
+
+.Portada-alimento {
+  width: 100%; }
+
+.Menu-alimento {
+  grid-area: Menu-alimento;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  width: 100%; }
+
+.pages-alimento {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.2fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "Titulo Titulo"  "alimento-1 alimento-2"  "alimento-3 alimento-4";
+  grid-area: pages-alimento; }
+
+.titulo-principal {
+  grid-area: Titulo;
+  text-align: center;
+  margin: 5px;
+  font-size: 50px;
+  border: dotted;
+  border-radius: 20px; }
+
+.alimento-1 {
+  grid-area: alimento-1;
+  margin-left: 2px; }
+
+.alimento-2 {
+  grid-area: alimento-2;
+  margin-right: 20px; }
+
+.alimento-3 {
+  grid-area: alimento-3;
+  margin-left: 2px; }
+
+.alimento-4 {
+  grid-area: alimento-4;
+  margin-right: 20px; }
+
+.container-ofertas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.2fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "Nav-Ofertas Nav-Ofertas" "pages-Ofertas pages-Ofertas"; }
+
+.Nav-Ofertas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.9fr .1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "Portada-Ofertas Portada-Ofertas" "Menu-Ofertas Menu-Ofertas";
+  grid-area: Nav-Ofertas; }
+
+.Portada-Ofertas {
+  width: 100%; }
+
+.pages-Ofertas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.2fr 2fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "titulo-principal titulo-principal" "Titulo-de-oferta Titulo-de-oferta";
+  grid-area: pages-Ofertas; }
+
+.titulo-principal {
+  grid-area: titulo-principal; }
+
+.Titulo-de-oferta {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: "subtitulo-oferta1 texto-oferta1" "subtitulo-oferta2 texto-oferta2"  "subtitulo-oferta3 texto-oferta3";
+  grid-area: Titulo-de-oferta; }
+
+.subtitulo-oferta1 {
+  font-size: 50px;
+  grid-area: subtitulo-oferta1;
+  border-style: solid;
+  border-color: black;
+  border-radius: 30px;
+  font-weight: bolder; }
+
+.Texto-oferta1 {
+  font-size: 25px;
+  grid-area: texto-oferta1;
+  font-weight: bolder; }
+
+.subtitulo-oferta2 {
+  font-size: 50px;
+  grid-area: subtitulo-oferta2;
+  border-style: solid;
+  border-color: black;
+  border-radius: 30px;
+  font-weight: bolder; }
+
+.Texto-oferta2 {
+  font-size: 25px;
+  grid-area: texto-oferta2;
+  font-weight: bolder; }
+
+.subtitulo-oferta3 {
+  font-size: 50px;
+  grid-area: subtitulo-oferta3;
+  border-style: solid;
+  border-color: black;
+  border-radius: 30px;
+  font-weight: bolder; }
+
+.Texto-oferta3 {
+  font-size: 25px;
+  grid-area: texto-oferta3;
+  font-weight: bolder; }
+
+.container-otros {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.2fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "Nav-otros"  "pages-otro"; }
+
+.Nav-otros {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.9fr 0.1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "Portada-otros"  "Menu-otros";
+  grid-area: Nav-otros; }
+
+.Portada-otros {
+  width: 100%;
+  grid-area: Portada-otros; }
+
+.Menu-otros {
+  grid-area: Menu-otros;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  width: 100%; }
+
+.pages-otros {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.2fr 1fr 1fr;
+  gap: 15px 70px;
+  grid-auto-flow: row;
+  grid-template-areas: "Titulo Titulo"  "otro-1 otro-2"  "otro-3 otro-4";
+  grid-area: pages-otro; }
+
+.otro-1 {
+  grid-area: otro-1;
+  margin-left: 2px; }
+
+.otro-2 {
+  grid-area: otro-2;
+  margin-right: 20px; }
+
+.otro-3 {
+  grid-area: otro-3;
+  margin-left: 2px; }
+
+.otro-4 {
+  grid-area: otro-4;
+  margin-right: 20px; }
+
+body {
+  background-color: #ffff00;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1200 800'%3E%3Cdefs%3E%3CradialGradient id='a' cx='0' cy='800' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23ff8000'/%3E%3Cstop offset='1' stop-color='%23ff8000' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='b' cx='1200' cy='800' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%2300ff19'/%3E%3Cstop offset='1' stop-color='%2300ff19' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='c' cx='600' cy='0' r='600' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%239900ff'/%3E%3Cstop offset='1' stop-color='%239900ff' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='d' cx='600' cy='800' r='600' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23ffff00'/%3E%3Cstop offset='1' stop-color='%23ffff00' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='e' cx='0' cy='0' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23FF0000'/%3E%3Cstop offset='1' stop-color='%23FF0000' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='f' cx='1200' cy='0' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%230CF'/%3E%3Cstop offset='1' stop-color='%230CF' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect fill='url(%23a)' width='1200' height='800'/%3E%3Crect fill='url(%23b)' width='1200' height='800'/%3E%3Crect fill='url(%23c)' width='1200' height='800'/%3E%3Crect fill='url(%23d)' width='1200' height='800'/%3E%3Crect fill='url(%23e)' width='1200' height='800'/%3E%3Crect fill='url(%23f)' width='1200' height='800'/%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover; }
+
+.container {
+  display: grid;
+  grid-template-columns: 0.8fr;
+  grid-template-rows: 0.3fr 0.3fr 0.5fr 0.5fr 0.5fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "Nav"  "Main"  "Alimentos"  "Otros"  "Promociones";
+  margin-left: -12px; }
+
+.Nav {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.2fr 0.01fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "Portada"  "Menu";
+  grid-area: Nav; }
+
+.Portada {
+  grid-area: Portada;
+  width: 100%; }
+
+.Menu {
+  grid-area: Menu;
+  margin: 0px 0 0px 0; }
+
+.Main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.2fr 0.03fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "Nombre"  "Texto";
+  grid-area: Main; }
+
+.Nombre {
+  grid-area: Nombre;
+  margin-top: -10px; }
+
+.Texto {
+  font-size: x-large;
+  grid-area: Texto;
+  font-weight: bolder; }
+
+.Alimentos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.08fr 0.3fr 0.3fr;
+  gap: 25px 10px;
+  grid-auto-flow: row;
+  grid-template-areas: "Buscador Buscador"  "Alimentos-perro Alimentos-gato"  "Alimentos-pez Alimentos-otro";
+  grid-area: Alimentos; }
+
+.Buscador {
+  grid-area: Buscador;
+  text-align: center; }
+
+.Alimentos-perro {
+  grid-area: Alimentos-perro; }
+
+.Alimentos-gato {
+  grid-area: Alimentos-gato; }
+
+.Alimentos-pez {
+  grid-area: Alimentos-pez; }
+
+.Alimentos-otro {
+  grid-area: Alimentos-otro; }
+
+.Otros {
+  display: grid;
+  grid-template-columns: 0.3fr 0.3fr;
+  grid-template-rows: 0.08fr 0.3fr 0.3fr;
+  gap: 10px 10px;
+  grid-auto-flow: row;
+  grid-template-areas: "productos-titulo productos-titulo"  "productos-higiene productos-golosinas"  "productos-juguete productos-correa";
+  grid-area: Otros; }
+
+.productos-titulo {
+  grid-area: productos-titulo;
+  text-align: center; }
+
+.productos-higiene {
+  grid-area: productos-higiene; }
+
+.productos-golosinas {
+  grid-area: productos-golosinas; }
+
+.productos-juguete {
+  grid-area: productos-juguete; }
+
+.productos-correa {
+  grid-area: productos-correa; }
+
+.Promociones {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.1fr 1fr 0.4fr;
+  gap: 25px 10px;
+  grid-auto-flow: row;
+  grid-template-areas: "Titulo Titulo"  "Promos1 Promos2"  "Promos3 Promos4";
+  grid-area: Promociones; }
+
+.Titulo {
+  grid-area: Titulo;
+  text-align: center;
+  font-size: large; }
+
+.Promos1 {
+  grid-area: Promos1; }
+
+.Promos2 {
+  grid-area: Promos2; }
+
+.Promos3 {
+  grid-area: Promos3; }
+
+.Promos4 {
+  grid-area: Promos4; }
+
+div.precio-producto p {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  padding: 5px 0 0 20px;
+  width: 175px;
+  height: 0px;
+  max-width: 130px;
+  text-align: center;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-left: 20px; }
+
+h3.product-otro {
+  text-align: center;
+  width: 230px; }
+
+h3.nombre-producto {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  padding: 0;
+  max-height: 50px;
+  height: 100px;
+  margin: 2px 0px 0px 0px; }
+
+h3.nombre-animal {
+  text-align: center; }
+
+.product img {
+  display: flex;
+  width: 80px;
+  justify-content: center;
+  justify-items: center;
+  height: 150px; }
+
+div.card {
+  display: flex;
+  flex-direction: column;
+  background: #b34242;
+  box-shadow: inset 20px 20px 20px #983838, inset -20px -20px 20px #ce4c4c;
+  margin-right: 2px;
+  margin-left: 0px;
+  margin-bottom: 2px; }
+
+main.pages-contacto ul li a.redes img {
+  margin: 0px 0 0 0;
+  padding: 0px;
+  max-width: 50px;
+  max-height: 50px; }
+
+ul.datos {
+  font-size: 20px;
+  font-weight: bolder; }
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical; }
+
+main.contacto ul li {
+  position: static;
+  display: flex;
+  flex-direction: column;
+  top: 0px;
+  font-family: inherit; }
+
+main.contacto h2 {
+  font-size: 1.7em;
+  margin: 5px 0; }
+
+main.contacto div ul.datos li {
+  font-size: 1.2em;
+  margin: 5px 0; }
+
+div.card h3.nombre-producto {
+  margin-bottom: 20px; }
+
+div.card img {
+  align-content: center;
+  width: 140px;
+  margin-top: 20px;
+  align-self: center; }
+
+div.precio-producto p {
+  margin-bottom: 40px;
+  margin-top: 50px; }
+
+@media screen and (min-width: 768px) {
+  div.card {
+    display: flex;
+    flex-direction: column;
+    background: #b34242;
+    box-shadow: inset 20px 20px 20px #983838, inset -20px -20px 20px #ce4c4c;
+    margin-top: 0;
+    align-items: center;
+    margin-left: 70px;
+    margin-right: 70px; }
+  div.nombre {
+    align-items: center; }
+  h3.nombre-producto, .product img, div.precio-producto p {
+    margin-left: 0px; }
+  .Logo {
+    margin-top: 10px; }
+  .Portada {
+    grid-area: Portada;
+    width: 100%; } }
+
+@media screen and (min-width: 1024px) {
+  div.card {
+    display: flex;
+    flex-direction: column;
+    background: #b34242;
+    box-shadow: inset 20px 20px 20px #983838, inset -20px -20px 20px #ce4c4c;
+    align-items: center; }
+  .Logo {
+    width: 50%;
+    align-items: center;
+    align-content: center; }
+  .Portada {
+    grid-area: Portada;
+    width: 100%; } }
+
+@media screen and (min-width: 1440px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 0.2fr 0.1fr 0.1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas: "Nav Nav Nav Nav"  "Main Main Main Main"  "Alimentos Alimentos Alimentos Alimentos"  "Otros Otros Otros Otros"  "Promociones Promociones Promociones Promociones"; }
+  div.card {
+    display: flex;
+    flex-direction: column;
+    background: #b34242;
+    box-shadow: inset 20px 20px 20px #983838, inset -20px -20px 20px #ce4c4c;
+    margin-top: 0;
+    align-items: center;
+    transition-property: all;
+    transition-duration: .5s;
+    transition-delay: .5s;
+    transition-timing-function: ease; }
+    div.card:hover {
+      transform: rotate(20deg); }
+  .Otros {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas: "productos-titulo productos-titulo productos-titulo productos-titulo" "productos-higiene productos-golosinas productos-juguete productos-correa";
+    grid-area: Otros;
+    margin-top: 30px; }
+  .nombre-otro {
+    align-content: center; }
+  .productos-titulo {
+    grid-area: productos-titulo;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 10px; }
+  .productos-higiene {
+    grid-area: productos-higiene; }
+  .productos-golosinas {
+    grid-area: productos-golosinas; }
+  .productos-juguete {
+    grid-area: productos-juguete; }
+  .productos-correa {
+    grid-area: productos-correa; }
+  .Promociones {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas: "Titulo Titulo Titulo Titulo"  "Promos1 Promos2 Promos3 Promos4";
+    grid-area: Promociones; }
+  .Titulo {
+    margin-top: 50px;
+    margin-bottom: 10px; }
+  .product {
+    height: 200px;
+    width: 370px; }
+  div.nombre {
+    align-items: center; }
+  .nombre-animal, .Alimentos-perro img, div.precio-producto p {
+    margin-left: 0px; }
+  .Alimentos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas: "Buscador Buscador Buscador Buscador "  "Alimentos-perro Alimentos-gato Alimentos-pez Alimentos-otro";
+    grid-area: Alimentos; }
+  .Buscador {
+    grid-area: Buscador;
+    text-align: center; }
+  .Alimentos-perro {
+    grid-area: Alimentos-perro;
+    margin-bottom: 20px;
+    text-align: center; }
+  .Alimentos-gato {
+    grid-area: Alimentos-gato;
+    text-align: center; }
+  .Alimentos-pez {
+    grid-area: Alimentos-pez;
+    text-align: center; }
+  .Alimentos-otro {
+    grid-area: Alimentos-otro;
+    text-align: center; }
+  .container-alimento {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 0.2fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas: "Nav-alimento Nav-alimento"  "pages-alimento pages-alimento"; }
+  .Nav-alimento {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.9fr .1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas: "Portada-alimento Portada-alimento"  "Menu-alimento Menu-alimento";
+    grid-area: Nav-alimento; }
+  .Portada-alimento {
+    width: 100%; }
+  .Menu-alimento {
+    grid-area: Menu-alimento;
+    margin: 0;
+    display: flex;
+    flex-direction: row; }
+  .pages-alimento {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas: "Titulo Titulo Titulo Titulo " "alimento-1 alimento-2 alimento-3 alimento-4";
+    grid-area: pages-alimento; }
+  .alimento-1 {
+    grid-area: alimento-1; }
+  .alimento-2 {
+    grid-area: alimento-2; }
+  .alimento-3 {
+    grid-area: alimento-3; }
+  .alimento-4 {
+    grid-area: alimento-4; }
+  .Nav-alimento {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.9fr .1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas: "Portada-alimento Portada-alimento"  "Menu-alimento Menu-alimento";
+    grid-area: Nav-alimento; }
+  .Portada-alimento {
+    width: 100%; }
+  .Menu-alimento {
+    grid-area: Menu-alimento;
+    display: flex;
+    flex-direction: row; }
+  .pages-otros {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas: "Titulo-principal Titulo-principal Titulo-principal Titulo-principal "  "otro-1 otro-2 otro-3 otro-4";
+    grid-area: pages-otro; }
+  h2.titulo-principal {
+    text-align: center;
+    font-weight: bolder;
+    font-size: 40px;
+    grid-area: Titulo-principal; }
+  .otro-1 {
+    grid-area: otro-1; }
+  .otro-2 {
+    grid-area: otro-2; }
+  .otro-3 {
+    grid-area: otro-3; }
+  .otro-4 {
+    grid-area: otro-4; }
+  .Logo {
+    animation-name: fade-in;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+    animation-duration: 3s; }
+  @keyframes fade-in {
+    0% {
+      transform: translateX(-50px);
+      animation-timing-function: ease; }
+    50% {
+      transform: translateX(0px);
+      animation-timing-function: ease; }
+    75% {
+      transform: translateX(50px);
+      animation-timing-function: ease; }
+    80% {
+      transform: translateX(100px);
+      animation-timing-function: ease; }
+    90% {
+      transform: translateX(50px);
+      animation-timing-function: ease; }
+    100% {
+      transform: translateX(0px);
+      animation-timing-function: ease; } } }
