@@ -39,7 +39,6 @@
 }
 .Menu{
     grid-area: Menu;
-    margin: 0px 0 0px 0;
 }
 .Main{
     display: grid;
@@ -217,7 +216,6 @@ ul.datos{
 // Esto es el formulario
 
 input[type=text], select, textarea{
-    width: 100%;
     padding: 12px;
     border: 1px solid #cccccc;
     border-radius: 4px;
@@ -225,6 +223,16 @@ input[type=text], select, textarea{
     margin-top: 6px;
     margin-bottom: 16px;
     resize: vertical;
+}
+#nombre, #apellido{
+    width: 50%;
+}
+#email{
+    width: 70%;
+}
+#mensaje{
+    height: 200px;
+    width: 90%;
 }
 main.contacto{
     ul li{
@@ -240,12 +248,20 @@ main.contacto{
         margin: 5px 0;
     }
     
-    div ul.datos li{
-        font-size: 1.2em;
+    div.form ul{
+        font-size: 2.2em;
         margin: 5px 0;
+        list-style: none;
     }
 }
-
+ul.datos{
+    list-style: none;
+    margin-left: -25px;
+}
+div.form ul li{
+    list-style: none;
+    margin-left: 0;
+}
 // Esto es para otros productos y para alimentos
 
 div{
@@ -278,6 +294,7 @@ div{
             align-items: center;
             margin-left: 70px;
             margin-right: 70px;
+            margin-bottom: 20px;
         }
         
         &.nombre{
@@ -294,6 +311,17 @@ div{
         grid-area: Portada;
         width: 100%;
     }
+
+    #nombre, #apellido {
+        width: 25%;
+    }
+    #email{
+        width: 50%;
+    }
+    #mensaje{
+        height: 200px;
+        width: 75%;
+    }
 }
 // Esto es para que se vea bien en una tablet horizontal (1024px x 768px)
 @media screen and (min-width: 1024px){
@@ -303,6 +331,7 @@ div{
         background: #b34242;
         box-shadow: inset 20px 20px 20px #983838, inset -20px -20px 20px #ce4c4c;
         align-items: center;
+        margin-bottom: 20px;
     }
     .Logo{
         width: 50%;
@@ -312,6 +341,17 @@ div{
     .Portada{
         grid-area: Portada;
         width: 100%;
+    }
+
+    #nombre, #apellido{
+        width: 20%;
+    }
+    #email{
+        width: 40%;
+    }
+    #mensaje{
+        height: 200px;
+        width: 50%;
     }
 }
 // Esto es para que se vea bien en una tablet horizontal (1440px x 900px)
@@ -390,18 +430,15 @@ div{
         grid-area: Promociones;
     }
     .Titulo{
-        margin-top: 50px;
         margin-bottom: 10px;
     }
     .product{
         height: 200px;
         width: 370px;
+        margin-left: -20px;
     }
     div.nombre{
         align-items: center;
-    }
-    .nombre-animal, .Alimentos-perro img, div.precio-producto p{
-        margin-left: 0px;
     }
     .Alimentos{
         display: grid;
@@ -440,7 +477,7 @@ div{
     .container-alimento{
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 0.2fr;
+        grid-template-rows: 0.2fr 1fr;
         gap: 0px 0px;
         grid-auto-flow: row;
         grid-template-areas: 
@@ -449,13 +486,13 @@ div{
     }
     .Nav-alimento{
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
         grid-template-rows: 0.9fr .1fr;
         gap: 0px 0px;
         grid-auto-flow: row;
         grid-template-areas: 
-        "Portada-alimento Portada-alimento" 
-        "Menu-alimento Menu-alimento";
+        "Portada-alimento" 
+        "Menu-alimento";
         grid-area: Nav-alimento;
     }
     .Portada-alimento{
@@ -464,7 +501,7 @@ div{
     .Menu-alimento{
         grid-area: Menu-alimento;
         margin: 0;
-        display: flex;
+        display: grid;
         flex-direction: row;
     }
     .pages-alimento{
@@ -472,8 +509,10 @@ div{
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: 0.2fr 1fr;
         gap: 0px 0px;
-        grid-auto-flow: row;
-        grid-template-areas: "Titulo Titulo Titulo Titulo " "alimento-1 alimento-2 alimento-3 alimento-4";
+        grid-auto-flow: column;
+        grid-template-areas: 
+        "Titulo Titulo Titulo Titulo " 
+        "alimento-1 alimento-2 alimento-3 alimento-4";
         grid-area: pages-alimento;
     }
     .alimento-1{
@@ -488,25 +527,8 @@ div{
     .alimento-4{
         grid-area: alimento-4;
     }
-    .Nav-alimento{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 0.9fr .1fr;
-        gap: 0px 0px;
-        grid-auto-flow: row;
-        grid-template-areas: 
-        "Portada-alimento Portada-alimento" 
-        "Menu-alimento Menu-alimento";
-        grid-area: Nav-alimento;
-    }
-    .Portada-alimento{
-        width: 100%;
-    }
-    .Menu-alimento{
-        grid-area: Menu-alimento;
-        display: flex;
-        flex-direction: row;
-    }
+    
+        // Esto es para otros-productos.html
     .pages-otros{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -535,6 +557,17 @@ div{
     }
     .otro-4{
         grid-area: otro-4;
+    }
+
+    #nombre, #apellido{
+        width: 15%;
+    }
+    #email{
+        width: 25%;
+    }
+    #mensaje{
+        height: 200px;
+        width: 50%;
     }
 
     .Logo{

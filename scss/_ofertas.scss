@@ -14,7 +14,9 @@
     grid-template-rows: 0.9fr .1fr;
     gap: 0px 0px;
     grid-auto-flow: row;
-    grid-template-areas: "Portada-Ofertas Portada-Ofertas" "Menu-Ofertas Menu-Ofertas";
+    grid-template-areas: 
+    "Portada-Ofertas Portada-Ofertas" 
+    "Menu-Ofertas Menu-Ofertas";
     grid-area: Nav-Ofertas;
 }
 .Portada-Ofertas{
@@ -26,54 +28,64 @@
     grid-template-rows: 0.2fr 2fr;
     gap: 0px 0px;
     grid-auto-flow: row;
-    grid-template-areas: "titulo-principal titulo-principal" "Titulo-de-oferta Titulo-de-oferta";
+    grid-template-areas: 
+    "titulo-principal titulo-principal" 
+    "Titulo-de-oferta Titulo-de-oferta";
     grid-area: pages-Ofertas;
 }
 .titulo-principal{
-    grid-area: titulo-principal;   
+    grid-area: titulo-principal;
+    align-items: center;
 }
 .Titulo-de-oferta{
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas: "subtitulo-oferta1 texto-oferta1" "subtitulo-oferta2 texto-oferta2"  "subtitulo-oferta3 texto-oferta3";
+    grid-template-areas: 
+    "subtitulo-oferta1 texto-oferta1" 
+    "subtitulo-oferta2 texto-oferta2"  
+    "subtitulo-oferta3 texto-oferta3";
     grid-area: Titulo-de-oferta;
 }
 .subtitulo-oferta1{
-    font-size: 50px;
+    font-size: medium;
     grid-area: subtitulo-oferta1;
     border-style: solid;
     border-color: black;
     border-radius: 30px;
-    font-weight: bolder;
+    font-weight: 800;
+    text-align: center;
+
 }
 .Texto-oferta1{
-    font-size: 25px;
+    font-size: small;
     grid-area: texto-oferta1;
-    font-weight: bolder;
+    font-weight: 800;
 }
 .subtitulo-oferta2{
-    font-size: 50px;
+    font-size: medium;
     grid-area: subtitulo-oferta2;
     border-style: solid;
     border-color: black;
     border-radius: 30px;
-    font-weight: bolder;
+    font-weight: 800;
+    text-align: center;
 }
 .Texto-oferta2{
-    font-size: 25px;
+    font-size: small;
     grid-area: texto-oferta2;
-    font-weight: bolder;
+    font-weight: 800;
 }
 .subtitulo-oferta3{
-    font-size: 50px;
+    font-size: medium;
     grid-area: subtitulo-oferta3;
     border-style: solid;
     border-color: black;
     border-radius: 30px;
-    font-weight: bolder;
+    font-weight: 800;
+    text-align: center;
 }
 .Texto-oferta3{
-    font-size: 25px;
+    font-size: small;
     grid-area: texto-oferta3;
-    font-weight: bolder;
+    font-weight: 800; 
 }

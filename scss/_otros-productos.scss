@@ -13,7 +13,6 @@
 .Nav-otros{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.9fr 0.1fr;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas: 
@@ -28,8 +27,7 @@
 .Menu-otros{
     grid-area: Menu-otros;
     margin: 0;
-    display: flex;
-    flex-direction: row;
+    display: grid;
     width: 100%;
 }
 .pages-otros{
