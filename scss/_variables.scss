@@ -1,0 +1,42 @@
+// Mixins
+@mixin Card {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+    align-items: center;
+}
+
+// Maps
+$pallette:(
+    color-card: #b34242,
+    shadow-color-card: #983838,
+    color-card1:  #b3a242,
+    shadow-color-card1: #989338,
+    color-card2: #6442b3,
+    shadow-color-card2: #383898,
+    color-card3: #42b35e,
+    shadow-color-card3: #389851
+    )
+;
+
+
+.card {
+    background: map-get($map: $pallette, $key:"color-card" );
+    box-shadow: inset 20px 20px 20px map-get($map: $pallette, $key:"shadow-color-card"), inset -20px -20px 20px #ce4c4c;
+
+}
+.card1{
+    @extend .card;
+    background: map-get($map: $pallette, $key:"color-card1" );
+    box-shadow: inset 20px 20px 20px map-get($map: $pallette, $key:"shadow-color-card1"), inset -20px -20px 20px #969608;
+}
+.card2{
+    @extend .card;
+    background: map-get($map: $pallette, $key:"color-card2" );
+    box-shadow: inset 20px 20px 20px map-get($map: $pallette, $key:"shadow-color-card2"), inset -20px -20px 20px #4c55ce;
+}
+.card3{
+    @extend .card;
+    background: map-get($map: $pallette, $key:"color-card3" );
+    box-shadow: inset 20px 20px 20px map-get($map: $pallette, $key:"shadow-color-card3"), inset -20px -20px 20px #57ce4c;
+}

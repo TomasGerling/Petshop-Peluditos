@@ -195,13 +195,29 @@ body {
   background-size: cover;
   font-family: Verdana, Geneva, Tahoma, sans-serif; }
 
+.card, .card1, .card2, .card3 {
+  background: #b34242;
+  box-shadow: inset 20px 20px 20px #983838, inset -20px -20px 20px #ce4c4c; }
+
+.card1 {
+  background: #b3a242;
+  box-shadow: inset 20px 20px 20px #989338, inset -20px -20px 20px #969608; }
+
+.card2 {
+  background: #6442b3;
+  box-shadow: inset 20px 20px 20px #383898, inset -20px -20px 20px #4c55ce; }
+
+.card3 {
+  background: #42b35e;
+  box-shadow: inset 20px 20px 20px #389851, inset -20px -20px 20px #57ce4c; }
+
 .container {
   display: grid;
   grid-template-columns: 0.8fr;
-  grid-template-rows: 0.3fr 0.3fr 0.5fr 0.5fr 0.5fr;
+  grid-template-rows: 0.3fr 0.3fr 0.3fr 0.5fr 0.5fr 0.5fr;
   gap: 0px 0px;
   grid-auto-flow: row;
-  grid-template-areas: "Nav"  "Main"  "Alimentos"  "Otros"  "Promociones";
+  grid-template-areas: "Nav"  "Main" "Horarios"  "Alimentos"  "Otros"  "Promociones";
   margin-left: -12px; }
 
 .Nav {
@@ -237,6 +253,15 @@ body {
   font-size: x-large;
   grid-area: Texto;
   font-weight: bolder; }
+
+div.Horarios {
+  grid-area: Horarios;
+  border: 2px solid black;
+  text-align: center;
+  border-radius: 20px;
+  font-size: large;
+  font-weight: bold;
+  font-style: italic; }
 
 .Alimentos {
   display: grid;
@@ -334,6 +359,7 @@ h3.product-otro {
 
 h3.nombre-producto {
   display: flex;
+  text-align: justify;
   justify-content: center;
   justify-items: center;
   padding: 0;
@@ -345,17 +371,13 @@ h3.nombre-animal {
   text-align: center; }
 
 .product img {
-  display: flex;
   width: 80px;
   justify-content: center;
   justify-items: center;
   height: 150px; }
 
-div.card {
+div.card, div.card1, div.card2, div.card3 {
   display: flex;
-  flex-direction: column;
-  background: #b34242;
-  box-shadow: inset 20px 20px 20px #983838, inset -20px -20px 20px #ce4c4c;
   margin-right: 2px;
   margin-left: 0px;
   margin-bottom: 2px; }
@@ -413,10 +435,10 @@ div.form ul li {
   list-style: none;
   margin-left: 0; }
 
-div.card h3.nombre-producto {
+div.card h3.nombre-producto, div.card1 h3.nombre-producto, div.card2 h3.nombre-producto, div.card3 h3.nombre-producto {
   margin-bottom: 20px; }
 
-div.card img {
+div.card img, div.card1 img, div.card2 img, div.card3 img {
   align-content: center;
   width: 140px;
   margin-top: 20px;
@@ -427,11 +449,11 @@ div.precio-producto p {
   margin-top: 50px; }
 
 @media screen and (min-width: 768px) {
-  div.card {
+  div.card, div.card1, div.card2, div.card3 {
     display: flex;
     flex-direction: column;
-    background: #b34242;
-    box-shadow: inset 20px 20px 20px #983838, inset -20px -20px 20px #ce4c4c;
+    margin-top: 0;
+    align-items: center;
     margin-top: 0;
     align-items: center;
     margin-left: 70px;
@@ -455,15 +477,20 @@ div.precio-producto p {
     width: 75%; } }
 
 @media screen and (min-width: 1024px) {
-  div.card {
+  .container {
+    grid-template-columns: 2fr; }
+  .Otros {
+    grid-template-columns: 1fr 1fr; }
+  div.card, div.card1, div.card2, div.card3 {
     display: flex;
     flex-direction: column;
-    background: #b34242;
-    box-shadow: inset 20px 20px 20px #983838, inset -20px -20px 20px #ce4c4c;
+    margin-top: 0;
     align-items: center;
-    margin-bottom: 20px; }
+    align-items: center;
+    margin-bottom: 20px;
+    margin-right: 20px; }
   .Logo {
-    width: 50%;
+    width: 60%;
     align-items: center;
     align-content: center; }
   .Portada {
@@ -481,22 +508,22 @@ div.precio-producto p {
   .container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 0.2fr 0.2fr 0.1fr 0.1fr;
+    grid-template-rows: 0.2fr 0.2fr 0.2fr 0.1fr 0.1fr;
     gap: 0px 0px;
     grid-auto-flow: row;
-    grid-template-areas: "Nav Nav Nav Nav"  "Main Main Main Main"  "Alimentos Alimentos Alimentos Alimentos"  "Otros Otros Otros Otros"  "Promociones Promociones Promociones Promociones"; }
-  div.card {
+    grid-template-areas: "Nav Nav Nav Nav"  "Main Main Main Main" "Horarios Horarios Horarios Horarios"  "Alimentos Alimentos Alimentos Alimentos"  "Otros Otros Otros Otros"  "Promociones Promociones Promociones Promociones"; }
+  div.card, div.card1, div.card2, div.card3 {
     display: flex;
     flex-direction: column;
-    background: #b34242;
-    box-shadow: inset 20px 20px 20px #983838, inset -20px -20px 20px #ce4c4c;
+    margin-top: 0;
+    align-items: center;
     margin-top: 0;
     align-items: center;
     transition-property: all;
     transition-duration: .5s;
     transition-delay: .5s;
     transition-timing-function: ease; }
-    div.card:hover {
+    div.card:hover, div.card1:hover, div.card2:hover, div.card3:hover {
       transform: rotate(20deg); }
   .Otros {
     display: grid;
@@ -527,11 +554,14 @@ div.precio-producto p {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 0.2fr 1fr;
     gap: 0px 0px;
+    margin-top: 40px;
     grid-auto-flow: row;
     grid-template-areas: "Titulo Titulo Titulo Titulo"  "Promos1 Promos2 Promos3 Promos4";
     grid-area: Promociones; }
   .Titulo {
-    margin-bottom: 10px; }
+    margin-bottom: 10px;
+    border: 1px solid black;
+    margin-top: 30px; }
   .product {
     height: 200px;
     width: 370px;

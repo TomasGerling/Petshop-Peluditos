@@ -2,6 +2,7 @@
 @import "ofertas";
 @import "otros-productos";
 @import "body";
+@import "variables";
 
 // Esto esta pensado que sea visto en 480px x 480px
 // Esta parte funciona para el grid de index.html
@@ -9,12 +10,13 @@
 .container{
     display: grid;
     grid-template-columns: 0.8fr;
-    grid-template-rows: 0.3fr 0.3fr 0.5fr 0.5fr 0.5fr;
+    grid-template-rows: 0.3fr 0.3fr 0.3fr 0.5fr 0.5fr 0.5fr;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas: 
     "Nav" 
-    "Main" 
+    "Main"
+    "Horarios" 
     "Alimentos" 
     "Otros" 
     "Promociones";
@@ -59,6 +61,15 @@
     font-size: x-large;
     grid-area: Texto;
     font-weight: bolder;
+}
+div.Horarios{
+    grid-area: Horarios;
+    border:2px solid black;
+    text-align: center;
+    border-radius: 20px;
+    font-size: large;
+    font-weight: bold;
+    font-style: italic;
 }
 .Alimentos{
     display: grid;
@@ -172,6 +183,7 @@ h3{
     }
     &.nombre-producto{
         display: flex;
+        text-align: justify;
         justify-content: center;
         justify-items: center;
         padding: 0;
@@ -184,7 +196,6 @@ h3{
     }
 }
 .product img{
-    display: flex;
     width: 80px;
     justify-content: center;
     justify-items: center;
@@ -192,9 +203,6 @@ h3{
 }
 div.card{
     display: flex;
-    flex-direction: column;
-    background: #b34242;
-    box-shadow: inset 20px 20px 20px #983838, inset -20px -20px 20px #ce4c4c;
     margin-right: 2px;
     margin-left: 0px;
     margin-bottom: 2px;
@@ -286,10 +294,7 @@ div{
 @media screen and (min-width: 768px){
     div{
         &.card{
-            display: flex;
-            flex-direction: column;
-            background: #b34242;
-            box-shadow: inset 20px 20px 20px #983838, inset -20px -20px 20px #ce4c4c;
+            @include Card;
             margin-top: 0;
             align-items: center;
             margin-left: 70px;
@@ -325,16 +330,20 @@ div{
 }
 // Esto es para que se vea bien en una tablet horizontal (1024px x 768px)
 @media screen and (min-width: 1024px){
+    .container{
+        grid-template-columns: 2fr;
+    }
+    .Otros{
+        grid-template-columns: 1fr 1fr;
+    }
     div.card{
-        display: flex;
-        flex-direction: column;
-        background: #b34242;
-        box-shadow: inset 20px 20px 20px #983838, inset -20px -20px 20px #ce4c4c;
+        @include Card;
         align-items: center;
         margin-bottom: 20px;
+        margin-right: 20px;
     }
     .Logo{
-        width: 50%;
+        width: 60%;
         align-items: center;
         align-content: center;
     }
@@ -359,21 +368,19 @@ div{
     .container{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 0.2fr 0.2fr 0.1fr 0.1fr;
+        grid-template-rows: 0.2fr 0.2fr 0.2fr 0.1fr 0.1fr;
         gap: 0px 0px;
         grid-auto-flow: row;
         grid-template-areas: 
         "Nav Nav Nav Nav" 
-        "Main Main Main Main" 
+        "Main Main Main Main"
+        "Horarios Horarios Horarios Horarios" 
         "Alimentos Alimentos Alimentos Alimentos" 
         "Otros Otros Otros Otros" 
         "Promociones Promociones Promociones Promociones";
     }
     div.card{
-        display: flex;
-        flex-direction: column;
-        background: #b34242;
-        box-shadow: inset 20px 20px 20px #983838, inset -20px -20px 20px #ce4c4c;
+        @include Card;
         margin-top: 0;
         align-items: center;
         transition-property: all;
@@ -423,6 +430,7 @@ div{
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: 0.2fr 1fr;
         gap: 0px 0px;
+        margin-top: 40px;
         grid-auto-flow: row;
         grid-template-areas: 
         "Titulo Titulo Titulo Titulo" 
@@ -431,6 +439,8 @@ div{
     }
     .Titulo{
         margin-bottom: 10px;
+        border: 1px solid black;
+        margin-top: 30px;
     }
     .product{
         height: 200px;
