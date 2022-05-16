@@ -33,9 +33,9 @@
     "Titulo-de-oferta Titulo-de-oferta";
     grid-area: pages-Ofertas;
 }
-.titulo-principal{
+.titulo-principal-ofertas{
     grid-area: titulo-principal;
-    align-items: center;
+    text-align: center;
 }
 .Titulo-de-oferta{
     grid-template-columns: 1fr 1fr;
