@@ -21,6 +21,8 @@ $pallette:(
 
 
 .card {
+    display: flex;
+    flex-direction: column;
     background: map-get($map: $pallette, $key:"color-card" );
     box-shadow: inset 20px 20px 20px map-get($map: $pallette, $key:"shadow-color-card"), inset -20px -20px 20px #ce4c4c;
 

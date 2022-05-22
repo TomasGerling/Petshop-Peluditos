@@ -274,7 +274,8 @@ div.form ul li{
 
 div{
     &.card h3.nombre-producto{
-        margin-bottom: 20px;
+        margin-bottom: 30px;
+        text-align: center;
     }
     
     &.card img{
@@ -292,6 +293,11 @@ div{
 
 // Esto es para que se vea bien en una tablet vertical (768px x 1024px)
 @media screen and (min-width: 768px){
+    .container{
+        grid-template-columns: 1fr;
+        max-width: 768px;
+        margin-left: 0px;
+    }
     div{
         &.card{
             @include Card;
@@ -331,7 +337,9 @@ div{
 // Esto es para que se vea bien en una tablet horizontal (1024px x 768px)
 @media screen and (min-width: 1024px){
     .container{
-        grid-template-columns: 2fr;
+        grid-template-columns: 1fr;
+        max-width: 1024px;
+        margin-left: 0px;
     }
     .Otros{
         grid-template-columns: 1fr 1fr;
@@ -371,6 +379,7 @@ div{
         grid-template-rows: 0.2fr 0.2fr 0.2fr 0.1fr 0.1fr;
         gap: 0px 0px;
         grid-auto-flow: row;
+        justify-content: space-around;
         grid-template-areas: 
         "Nav Nav Nav Nav" 
         "Main Main Main Main"
@@ -378,6 +387,8 @@ div{
         "Alimentos Alimentos Alimentos Alimentos" 
         "Otros Otros Otros Otros" 
         "Promociones Promociones Promociones Promociones";
+        margin-left: 0px;
+        max-width: 1440px;
     }
     div.card{
         @include Card;
@@ -444,8 +455,8 @@ div{
     }
     .product{
         height: 200px;
-        width: 370px;
-        margin-left: -20px;
+        width: 300px;
+        // margin-left: -20px;
     }
     div.nombre{
         align-items: center;
@@ -546,7 +557,7 @@ div{
         gap: 0px 0px;
         grid-auto-flow: row;
         grid-template-areas: 
-        "Titulo-principal Titulo-principal Titulo-principal Titulo-principal " 
+        "Titulo Titulo Titulo Titulo" 
         "otro-1 otro-2 otro-3 otro-4";
         grid-area: pages-otro;
     }

@@ -85,9 +85,9 @@
   grid-template-areas: "titulo-principal titulo-principal"  "Titulo-de-oferta Titulo-de-oferta";
   grid-area: pages-Ofertas; }
 
-.titulo-principal {
+.titulo-principal-ofertas {
   grid-area: titulo-principal;
-  align-items: center; }
+  text-align: center; }
 
 .Titulo-de-oferta {
   grid-template-columns: 1fr 1fr;
@@ -196,6 +196,8 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif; }
 
 .card, .card1, .card2, .card3 {
+  display: flex;
+  flex-direction: column;
   background: #b34242;
   box-shadow: inset 20px 20px 20px #983838, inset -20px -20px 20px #ce4c4c; }
 
@@ -436,7 +438,8 @@ div.form ul li {
   margin-left: 0; }
 
 div.card h3.nombre-producto, div.card1 h3.nombre-producto, div.card2 h3.nombre-producto, div.card3 h3.nombre-producto {
-  margin-bottom: 20px; }
+  margin-bottom: 30px;
+  text-align: center; }
 
 div.card img, div.card1 img, div.card2 img, div.card3 img {
   align-content: center;
@@ -449,6 +452,10 @@ div.precio-producto p {
   margin-top: 50px; }
 
 @media screen and (min-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+    max-width: 768px;
+    margin-left: 0px; }
   div.card, div.card1, div.card2, div.card3 {
     display: flex;
     flex-direction: column;
@@ -478,7 +485,9 @@ div.precio-producto p {
 
 @media screen and (min-width: 1024px) {
   .container {
-    grid-template-columns: 2fr; }
+    grid-template-columns: 1fr;
+    max-width: 1024px;
+    margin-left: 0px; }
   .Otros {
     grid-template-columns: 1fr 1fr; }
   div.card, div.card1, div.card2, div.card3 {
@@ -511,7 +520,10 @@ div.precio-producto p {
     grid-template-rows: 0.2fr 0.2fr 0.2fr 0.1fr 0.1fr;
     gap: 0px 0px;
     grid-auto-flow: row;
-    grid-template-areas: "Nav Nav Nav Nav"  "Main Main Main Main" "Horarios Horarios Horarios Horarios"  "Alimentos Alimentos Alimentos Alimentos"  "Otros Otros Otros Otros"  "Promociones Promociones Promociones Promociones"; }
+    justify-content: space-around;
+    grid-template-areas: "Nav Nav Nav Nav"  "Main Main Main Main" "Horarios Horarios Horarios Horarios"  "Alimentos Alimentos Alimentos Alimentos"  "Otros Otros Otros Otros"  "Promociones Promociones Promociones Promociones";
+    margin-left: 0px;
+    max-width: 1440px; }
   div.card, div.card1, div.card2, div.card3 {
     display: flex;
     flex-direction: column;
@@ -564,8 +576,7 @@ div.precio-producto p {
     margin-top: 30px; }
   .product {
     height: 200px;
-    width: 370px;
-    margin-left: -20px; }
+    width: 300px; }
   div.nombre {
     align-items: center; }
   .Alimentos {
@@ -636,7 +647,7 @@ div.precio-producto p {
     grid-template-rows: 0.2fr 1fr;
     gap: 0px 0px;
     grid-auto-flow: row;
-    grid-template-areas: "Titulo-principal Titulo-principal Titulo-principal Titulo-principal "  "otro-1 otro-2 otro-3 otro-4";
+    grid-template-areas: "Titulo Titulo Titulo Titulo"  "otro-1 otro-2 otro-3 otro-4";
     grid-area: pages-otro; }
   h2.titulo-principal {
     text-align: center;
