@@ -3,12 +3,13 @@
 .container-alimento{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.2fr 1fr;
+    grid-template-rows: 0.2fr 1fr 0.2fr;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas: 
     "Nav-alimento" 
-    "pages-alimento";
+    "pages-alimento"
+    "footer";
 }
 .Nav-alimento{
     display: grid;
@@ -64,4 +65,13 @@
 .alimento-4{
     grid-area: alimento-4;
     margin-right: 20px;
+}
+div.footer-alimento{
+    grid-area: footer;
+    display: flex;
+    flex-direction: column;
+    & nav.row{
+        margin: 0px;
+        width: 100%;
+    }
 }
