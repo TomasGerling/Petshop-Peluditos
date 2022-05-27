@@ -8,9 +8,11 @@
 // Esta parte funciona para el grid de index.html
 
 .container{
+    align-items: center;
     display: grid;
-    margin-left: -7px;
+    margin: 0 auto;
     grid-template-columns: 2fr;
+    padding: 0px;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas: 
@@ -318,8 +320,7 @@ div.footer-contacto{
 @media screen and (min-width: 768px){
     .container{
         grid-template-columns: 1fr;
-        max-width: 768px;
-        margin-left: 0px;
+        margin: 0 auto;
     }
     div{
         &.card{
@@ -361,8 +362,7 @@ div.footer-contacto{
 @media screen and (min-width: 1024px){
     .container{
         grid-template-columns: 1fr;
-        max-width: 1024px;
-        margin-left: 0px;
+        margin: 0px auto;
     }
     .Otros{
         grid-template-columns: 1fr 1fr;
@@ -399,17 +399,18 @@ div.footer-contacto{
     .container{
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 0.2fr 0.2fr 0.2fr 0.1fr 0.1fr;
         gap: 0px 0px;
+        margin: 0;
         grid-auto-flow: row;
         justify-content: space-around;
         grid-template-areas: 
-        "Nav" 
+        "Navegacion" 
         "Main"
         "Horarios" 
         "Alimentos" 
         "Otros" 
-        "Promociones";
+        "Promociones"
+        "footer";
         margin-left: 0px;
         min-width: 1450px;
     }
@@ -514,6 +515,9 @@ div.footer-contacto{
     .Alimentos-otro{
         grid-area: Alimentos-otro;
         text-align: center;
+    }
+    footer{
+        margin-top: 210px;
     }
     // Esto es para Alimento.html
 
