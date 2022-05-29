@@ -3,12 +3,12 @@
 .container-otros{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.2fr 1fr;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas: 
     "Nav-otros" 
-    "pages-otro";
+    "pages-otro"
+    "footer-otros";
 }
 .Nav-otros{
     display: grid;
@@ -57,4 +57,13 @@
 .otro-4{
     grid-area: otro-4;
     margin-right: 20px;
+}
+div.footer-ofertas{
+    display: flex;
+    grid-area: footer-otros;
+    width: 100%;
+    flex-direction: row;
+    & nav.row{
+        margin: 0px;
+    }
 }

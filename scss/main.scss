@@ -3,6 +3,7 @@
 @import "otros-productos";
 @import "body";
 @import "variables";
+@import "contacto";
 
 // Esto esta pensado que sea visto en 480px x 480px
 // Esta parte funciona para el grid de index.html
@@ -207,68 +208,28 @@ div.card{
     margin-left: 0px;
     margin-bottom: 2px;
 }
-// Esto afecta a contacto.html
-
-// estos son los iconos de las redes
-
-main.pages-contacto ul li a.redes img{
-    margin: 0px 0 0 0;
+div.footer{
+    grid-area: footer;
+    display: flex;
+    flex-direction: column;
+    & nav.row{
+        margin: 0px;
+    }
+}
+.logo-footer{
+    height: auto;
+    width: 100px;
+    padding-left: 0px ;
+}
+ul.col-5{
+    width: 120px;
     padding: 0px;
-    max-width: 50px;
-    max-height: 50px;
 }
-ul.datos{
-    font-size: 20px;
-    font-weight: bolder;
-}
-// Esto es el formulario
-
-input[type=text], select, textarea{
-    padding: 12px;
-    border: 1px solid #cccccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    resize: vertical;
-}
-#nombre, #apellido{
-    width: 50%;
-}
-#email{
-    width: 70%;
-}
-#mensaje{
-    height: 200px;
-    width: 90%;
-}
-main.contacto{
-    ul li{
-        position: static;
-        display: flex;
-        flex-direction: column;
-        top: 0px;
-        font-family: inherit;
-    }
-    
-    h2{
-        font-size: 1.7em;
-        margin: 5px 0;
-    }
-    
-    div.form ul{
-        font-size: 2.2em;
-        margin: 5px 0;
-        list-style: none;
-    }
-}
-ul.datos{
-    list-style: none;
-    margin-left: -25px;
-}
-div.form ul li{
-    list-style: none;
-    margin-left: 0;
+.row{
+    display: flex;
+    flex-direction: row ;
+    justify-content: space-around;
+    margin: 0 auto;
 }
 // Esto es para otros productos y para alimentos
 
@@ -288,32 +249,6 @@ div{
     &.precio-producto p{
         margin-bottom: 40px;
         margin-top: 50px;
-    }
-}
-div.footer{
-    grid-area: footer;
-    display: flex;
-    flex-direction: column;
-    & nav.row{
-        margin: 0px;
-    }
-}
-.logo-footer{
-    height: auto;
-    width: 100px;
-    padding-left: 0px ;
-}
-ul.col-5{
-    width: 120px;
-    padding: 0px;
-}
-div.footer-contacto{
-    grid-area: footer;
-    display: flex;
-    flex-direction: column;
-    & nav.row{
-        margin: 0px;
-        width: 100%;
     }
 }
 // Esto es para que se vea bien en una tablet vertical (768px x 1024px)
@@ -346,7 +281,7 @@ div.footer-contacto{
         grid-area: Portada;
         width: 100%;
     }
-
+        // Esto es para Contacto.html
     #nombre, #apellido {
         width: 25%;
     }
@@ -382,7 +317,7 @@ div.footer-contacto{
         grid-area: Portada;
         width: 100%;
     }
-
+        // Esto es para Contacto.html
     #nombre, #apellido{
         width: 20%;
     }
@@ -392,6 +327,12 @@ div.footer-contacto{
     #mensaje{
         height: 200px;
         width: 50%;
+    }
+    div.mapa{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        margin-top: -500px;
     }
 }
 // Esto es para que se vea bien en una tablet horizontal (1440px x 900px)
@@ -413,11 +354,13 @@ div.footer-contacto{
         "footer";
         margin-left: 0px;
         min-width: 1450px;
+        align-content: center;
     }
     div.card{
         @include Card;
         margin-top: 0;
         align-items: center;
+        margin: 0 auto;
         transition-property: all;
         transition-duration: .5s;
         transition-delay: .5s;
@@ -479,7 +422,8 @@ div.footer-contacto{
     }
     .product{
         height: 200px;
-        width: 300px;
+        width: 250px;
+        margin: 0 auto;
     }
     div.nombre{
         align-items: center;
@@ -606,6 +550,7 @@ div.footer-contacto{
         grid-area: otro-4;
     }
 
+        // Esto es para Contacto.html
     #nombre, #apellido{
         width: 15%;
     }

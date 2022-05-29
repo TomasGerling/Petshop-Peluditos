@@ -2,21 +2,23 @@
 
 .container-ofertas{
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.2fr 1fr;
+    grid-template-columns: 1fr;
     gap: 0px 0px;
     grid-auto-flow: row;
-    grid-template-areas: "Nav-Ofertas Nav-Ofertas" "pages-Ofertas pages-Ofertas"
+    grid-template-areas: 
+    "Nav-Ofertas" 
+    "pages-Ofertas"
+    "footer-ofertas"
 }
 .Nav-Ofertas{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: 0.9fr .1fr;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas: 
-    "Portada-Ofertas Portada-Ofertas" 
-    "Menu-Ofertas Menu-Ofertas";
+    "Portada-Ofertas" 
+    "Menu-Ofertas";
     grid-area: Nav-Ofertas;
 }
 .Portada-Ofertas{
@@ -24,13 +26,13 @@
 }
 .pages-Ofertas{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: 0.2fr 2fr;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas: 
-    "titulo-principal titulo-principal" 
-    "Titulo-de-oferta Titulo-de-oferta";
+    "titulo-principal" 
+    "Titulo-de-oferta";
     grid-area: pages-Ofertas;
 }
 .titulo-principal-ofertas{
@@ -88,4 +90,13 @@
     font-size: small;
     grid-area: texto-oferta3;
     font-weight: 800; 
+}
+div.footer-ofertas{
+    display: flex;
+    grid-area: footer-ofertas;
+    width: 100%;
+    flex-direction: row;
+    & nav.row{
+        margin: 0px;
+    }
 }

@@ -58,19 +58,18 @@
 
 .container-ofertas {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 0.2fr 1fr;
+  grid-template-columns: 1fr;
   gap: 0px 0px;
   grid-auto-flow: row;
-  grid-template-areas: "Nav-Ofertas Nav-Ofertas" "pages-Ofertas pages-Ofertas"; }
+  grid-template-areas: "Nav-Ofertas"  "pages-Ofertas" "footer-ofertas"; }
 
 .Nav-Ofertas {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-template-rows: 0.9fr .1fr;
   gap: 0px 0px;
   grid-auto-flow: row;
-  grid-template-areas: "Portada-Ofertas Portada-Ofertas"  "Menu-Ofertas Menu-Ofertas";
+  grid-template-areas: "Portada-Ofertas"  "Menu-Ofertas";
   grid-area: Nav-Ofertas; }
 
 .Portada-Ofertas {
@@ -78,11 +77,11 @@
 
 .pages-Ofertas {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-template-rows: 0.2fr 2fr;
   gap: 0px 0px;
   grid-auto-flow: row;
-  grid-template-areas: "titulo-principal titulo-principal"  "Titulo-de-oferta Titulo-de-oferta";
+  grid-template-areas: "titulo-principal"  "Titulo-de-oferta";
   grid-area: pages-Ofertas; }
 
 .titulo-principal-ofertas {
@@ -137,13 +136,20 @@
   grid-area: texto-oferta3;
   font-weight: 800; }
 
+div.footer-ofertas {
+  display: flex;
+  grid-area: footer-ofertas;
+  width: 100%;
+  flex-direction: row; }
+  div.footer-ofertas nav.row {
+    margin: 0px; }
+
 .container-otros {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 0.2fr 1fr;
   gap: 0px 0px;
   grid-auto-flow: row;
-  grid-template-areas: "Nav-otros"  "pages-otro"; }
+  grid-template-areas: "Nav-otros"  "pages-otro" "footer-otros"; }
 
 .Nav-otros {
   display: grid;
@@ -188,6 +194,14 @@
   grid-area: otro-4;
   margin-right: 20px; }
 
+div.footer-ofertas {
+  display: flex;
+  grid-area: footer-otros;
+  width: 100%;
+  flex-direction: row; }
+  div.footer-ofertas nav.row {
+    margin: 0px; }
+
 body {
   background-color: lightblue;
   background-attachment: fixed;
@@ -211,6 +225,79 @@ body {
 .card3 {
   background: #42b35e;
   box-shadow: inset 20px 20px 20px #389851, inset -20px -20px 20px #57ce4c; }
+
+main.pages-contacto ul li a.redes img {
+  margin: 0px 0 0 0;
+  padding: 0px;
+  max-width: 50px;
+  max-height: 50px; }
+
+div.pages-contacto {
+  display: flex; }
+
+ul.datos {
+  font-size: 20px;
+  font-weight: bolder; }
+
+div.form {
+  display: inline-block;
+  flex-direction: column;
+  width: 80%; }
+
+input[type=text], select, textarea {
+  padding: 12px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical; }
+
+#nombre, #apellido {
+  width: 50%; }
+
+#email {
+  width: 70%; }
+
+#mensaje {
+  height: 200px;
+  width: 90%; }
+
+main.contacto ul li {
+  position: static;
+  display: flex;
+  flex-direction: column;
+  top: 0px;
+  font-family: inherit; }
+
+main.contacto h2 {
+  font-size: 1.7em;
+  margin: 5px 0; }
+
+main.contacto div.form ul {
+  font-size: 2.2em;
+  margin: 5px 0;
+  list-style: none; }
+
+ul.datos {
+  list-style: none;
+  margin-left: -25px; }
+
+div.form ul li {
+  list-style: none;
+  margin-left: 0; }
+
+div.mapa {
+  display: flex;
+  flex-direction: column; }
+
+div.footer-contacto {
+  grid-area: footer;
+  display: flex;
+  flex-direction: column; }
+  div.footer-contacto nav.row {
+    margin: 0px;
+    width: 100%; }
 
 .container {
   align-items: center;
@@ -382,73 +469,6 @@ div.card, div.card1, div.card2, div.card3 {
   margin-left: 0px;
   margin-bottom: 2px; }
 
-main.pages-contacto ul li a.redes img {
-  margin: 0px 0 0 0;
-  padding: 0px;
-  max-width: 50px;
-  max-height: 50px; }
-
-ul.datos {
-  font-size: 20px;
-  font-weight: bolder; }
-
-input[type=text], select, textarea {
-  padding: 12px;
-  border: 1px solid #cccccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: vertical; }
-
-#nombre, #apellido {
-  width: 50%; }
-
-#email {
-  width: 70%; }
-
-#mensaje {
-  height: 200px;
-  width: 90%; }
-
-main.contacto ul li {
-  position: static;
-  display: flex;
-  flex-direction: column;
-  top: 0px;
-  font-family: inherit; }
-
-main.contacto h2 {
-  font-size: 1.7em;
-  margin: 5px 0; }
-
-main.contacto div.form ul {
-  font-size: 2.2em;
-  margin: 5px 0;
-  list-style: none; }
-
-ul.datos {
-  list-style: none;
-  margin-left: -25px; }
-
-div.form ul li {
-  list-style: none;
-  margin-left: 0; }
-
-div.card h3.nombre-producto, div.card1 h3.nombre-producto, div.card2 h3.nombre-producto, div.card3 h3.nombre-producto {
-  margin-bottom: 30px;
-  text-align: center; }
-
-div.card img, div.card1 img, div.card2 img, div.card3 img {
-  align-content: center;
-  width: 140px;
-  margin-top: 20px;
-  align-self: center; }
-
-div.precio-producto p {
-  margin-bottom: 40px;
-  margin-top: 50px; }
-
 div.footer {
   grid-area: footer;
   display: flex;
@@ -465,13 +485,25 @@ ul.col-5 {
   width: 120px;
   padding: 0px; }
 
-div.footer-contacto {
-  grid-area: footer;
+.row {
   display: flex;
-  flex-direction: column; }
-  div.footer-contacto nav.row {
-    margin: 0px;
-    width: 100%; }
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 0 auto; }
+
+div.card h3.nombre-producto, div.card1 h3.nombre-producto, div.card2 h3.nombre-producto, div.card3 h3.nombre-producto {
+  margin-bottom: 30px;
+  text-align: center; }
+
+div.card img, div.card1 img, div.card2 img, div.card3 img {
+  align-content: center;
+  width: 140px;
+  margin-top: 20px;
+  align-self: center; }
+
+div.precio-producto p {
+  margin-bottom: 40px;
+  margin-top: 50px; }
 
 @media screen and (min-width: 768px) {
   .container {
@@ -531,7 +563,12 @@ div.footer-contacto {
     width: 40%; }
   #mensaje {
     height: 200px;
-    width: 50%; } }
+    width: 50%; }
+  div.mapa {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: -500px; } }
 
 @media screen and (min-width: 1440px) {
   .container {
@@ -543,7 +580,8 @@ div.footer-contacto {
     justify-content: space-around;
     grid-template-areas: "Navegacion"  "Main" "Horarios"  "Alimentos"  "Otros"  "Promociones" "footer";
     margin-left: 0px;
-    min-width: 1450px; }
+    min-width: 1450px;
+    align-content: center; }
   div.card, div.card1, div.card2, div.card3 {
     display: flex;
     flex-direction: column;
@@ -551,6 +589,7 @@ div.footer-contacto {
     align-items: center;
     margin-top: 0;
     align-items: center;
+    margin: 0 auto;
     transition-property: all;
     transition-duration: .5s;
     transition-delay: .5s;
@@ -596,7 +635,8 @@ div.footer-contacto {
     margin-top: 30px; }
   .product {
     height: 200px;
-    width: 300px; }
+    width: 250px;
+    margin: 0 auto; }
   div.nombre {
     align-items: center; }
   .Alimentos {
